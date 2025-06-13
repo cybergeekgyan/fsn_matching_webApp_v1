@@ -43,13 +43,14 @@ if not master.empty:
             if results.empty:
                 st.warning("🔍 No matches found.")
             else:
-                st.success(f"✅ Found {len(results)} matches.")
+                unique_results = results.drop_duplicates()
+                st.success(f"✅ Found {len(unique_results)} matches.")
                 st.dataframe(results[['search_query', 'Title', 'FSN', 'City', 'Buying']])
 
                 # Download buttons
                 csv = results.to_csv(index=False).encode('utf-8')
                 st.download_button("⬇️ Download All Matches CSV", csv, "matched_fsn_results.csv", "text/csv")
 
-                unique_results = results.drop_duplicates()
+                # unique_results = results.drop_duplicates()
                 csv_unique = unique_results.to_csv(index=False).encode('utf-8')
                 st.download_button("⬇️ Download Unique Matches CSV", csv_unique, "matched_unique_fsn_results.csv", "text/csv")
