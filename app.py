@@ -13,7 +13,7 @@ master = pd.DataFrame()
 if uploaded_file is not None:
     try:
         master = pd.read_csv(uploaded_file)
-        if not {'FSN', 'City','Title', 'Buying}.issubset(master.columns):
+        if not {'FSN', 'City','Title', 'Buying'}.issubset(master.columns):
             st.error("❌ CSV must contain 'FSN', 'City', 'Title' and 'Buying' columns.")
         else:
             st.success("✅ File uploaded successfully!")
