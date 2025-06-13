@@ -44,7 +44,7 @@ if not master.empty:
                 st.warning("🔍 No matches found.")
             else:
                 st.success(f"✅ Found {len(results)} matches.")
-                st.dataframe(results[['search_query', 'Title', 'FSN', 'City', 'Buying]])
+                st.dataframe(results[['search_query', 'Title', 'FSN', 'City', 'Buying']])
 
                 # Download buttons
                 csv = results.to_csv(index=False).encode('utf-8')
