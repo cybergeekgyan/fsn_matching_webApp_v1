@@ -13,8 +13,8 @@ master = pd.DataFrame()
 if uploaded_file is not None:
     try:
         master = pd.read_csv(uploaded_file)
-        if not {'FSN', 'Title'}.issubset(master.columns):
-            st.error("❌ CSV must contain 'FSN' and 'Title' columns.")
+        if not {'FSN', 'City','Title', 'Buying}.issubset(master.columns):
+            st.error("❌ CSV must contain 'FSN', 'City', 'Title' and 'Buying' columns.")
         else:
             st.success("✅ File uploaded successfully!")
     except Exception as e:
@@ -44,7 +44,7 @@ if not master.empty:
                 st.warning("🔍 No matches found.")
             else:
                 st.success(f"✅ Found {len(results)} matches.")
-                st.dataframe(results[['search_query', 'Title', 'FSN']])
+                st.dataframe(results[['search_query', 'Title', 'FSN', 'City', 'Buying]])
 
                 # Download buttons
                 csv = results.to_csv(index=False).encode('utf-8')
