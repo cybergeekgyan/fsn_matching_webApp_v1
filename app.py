@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Title
-st.title("🔍 Product Search Query Matcher")
+st.title("🔍 FSN Search Query Matcher")
 
 # File uploader
 uploaded_file = st.file_uploader("📁 Upload 'selection_master.csv'", type="csv")
