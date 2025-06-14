@@ -23,7 +23,7 @@ This WebApp allows users to **match product titles** against **search queries & 
 - Batch match across all search queries at once
 - Click on view results in a searchable, sortable table
 - View live results in table
-- Click on download and Download matched FSNs as a CSV: `search_query` | `Product_Title` | `FSN` | 'City' | 'Buying' |
+- Click on download and Download matched FSNs as a CSV: `search_query` | `Product_Title` | `FSN` | `City` | `Buying` |
 
 ## 📁 Example File Formats:
 
