@@ -7,9 +7,9 @@ st.title("🔍 FSN Search Query Matcher")
 # File uploader
 uploaded_file = st.file_uploader("📁 Upload 'selection_master.csv'", type="csv")
 
-instock_file = st.file_uploader("📁 Upload 'instock_new.csv'", type="csv")
+# instock_file = st.file_uploader("📁 Upload 'instock_new.csv'", type="csv")
 
-ds_master = st.file_uploader("📁 Upload 'ds_master.csv'", type="csv")
+# ds_master = st.file_uploader("📁 Upload 'ds_master.csv'", type="csv")
 
 
 # Initialize DataFrame
@@ -18,7 +18,6 @@ master = pd.DataFrame()
 if uploaded_file is not None:
     try:
         master = pd.read_csv(uploaded_file)
-        master = master['FSN', 'City','Title', 'Buying']
         if not {'FSN', 'City','Title', 'Buying'}.issubset(master.columns):
             st.error("❌ CSV must contain 'FSN', 'City', 'Title' and 'Buying' columns.")
         else:
