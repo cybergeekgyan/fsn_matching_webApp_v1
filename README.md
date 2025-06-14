@@ -59,7 +59,10 @@ This WebApp allows users to **match product titles** against **search queries & 
 
 ## ▶️ Run the App
 
-- Install pre-requisites: `streamlit`, `pandas`
+- Install pre-requisites:
+  ```python
+  pip install -r requirements.txt
+  ```
 - Clone the repository and run the app:
 
     ```python
