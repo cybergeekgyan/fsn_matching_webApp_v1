@@ -55,7 +55,7 @@ This WebApp allows users to **match product titles** against **search queries & 
 - Enter search queries 
 - Choose matching type: `Partial`, `Exact`, `Fuzzy`, 'TF-IDF + Cosine', 'BERT'
 - Get search_query, FSN, City, Buying as a result
-- Calculate Instock %, for each search_querXcity where that particular FSN is live 
+- Calculate `Instock %` for each `search_query X city` where that particular FSN is live 
 
 ## ▶️ Run the App
 
