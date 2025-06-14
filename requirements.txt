@@ -1,0 +1,7 @@
+streamlit
+pandas
+scikit-learn
+rapidfuzz
+sentence-transformers
+plotly
+seaborn
