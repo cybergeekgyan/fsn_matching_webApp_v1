@@ -7,6 +7,11 @@ st.title("🔍 FSN Search Query Matcher")
 # File uploader
 uploaded_file = st.file_uploader("📁 Upload 'selection_master.csv'", type="csv")
 
+instock_file = st.file_uploader("📁 Upload 'instock_new.csv'", type="csv")
+
+ds_master = st.file_uploader("📁 Upload 'ds_master.csv'", type="csv")
+
+
 # Initialize DataFrame
 master = pd.DataFrame()
 
