@@ -18,8 +18,8 @@ master = pd.DataFrame()
 if uploaded_file is not None:
     try:
         master = pd.read_csv(uploaded_file)
-        if not {'FSN', 'City','Title', 'Buying'}.issubset(master.columns):
-            st.error("❌ CSV must contain 'FSN', 'City', 'Title' and 'Buying' columns.")
+        if not {'FSN', 'City','Title', 'Brand'}.issubset(master.columns):
+            st.error("❌ CSV must contain 'FSN', 'Title' and 'Brand ' columns.")
         else:
             st.success("✅ File uploaded successfully!")
     except Exception as e:
@@ -50,7 +50,7 @@ if not master.empty:
             else:
                 unique_results = results.drop_duplicates()
                 st.success(f"✅ Found {len(unique_results)} matches.")
-                st.dataframe(results[['search_query', 'Title', 'FSN', 'City', 'Buying']])
+                st.dataframe(results[['search_query', 'Title', 'FSN', 'Brand']])
 
                 # Download buttons
                 csv = results.to_csv(index=False).encode('utf-8')
